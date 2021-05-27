@@ -12,5 +12,5 @@ Product::Product(const std::string& title, int weight, int produced, int expires
 
 std::string Product::Info() const
 {
-    return  Tovar::Info() + " Expires: " +to_string(GetExpirationDate()) +";";
+    return Tovar::Info() + " Expires: " + to_string(GetExpirationDate()) + ";";
 }

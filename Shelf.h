@@ -10,7 +10,6 @@
 class Shelf
 {
 public:
-    /** Default constructor */
     Shelf();
 
     int GetCapacity() { return m_Capacity; }

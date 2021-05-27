@@ -4,19 +4,15 @@
 #include "Tovar.h"
 #include "Shelf.h"
 #include "Product.h"
+#include "Joghurt.h"
 
 using namespace std;
-//using std::cout;
-//using std::endl;
 
 int main()
 {
-    Tovar b("Fairy tale", 0, 100);
-    Tovar b2("Snowwhite", 0, 100);
-    Product e("Mathpedia", 12, 200, 12);
+
+    Joghurt e("Burya", 12, 200, 12, 32, "Peach");
     Shelf sh;
-    sh.AddTovar(b);
-    sh.AddTovar(b2);
     sh.AddTovar(e);
 
     string title;

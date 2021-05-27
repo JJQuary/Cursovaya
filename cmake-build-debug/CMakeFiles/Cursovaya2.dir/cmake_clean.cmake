@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Cursovaya2.dir/main.cpp.obj"
   "Cursovaya2.exe"
   "Cursovaya2.exe.manifest"
+  "Cursovaya2.lib"
   "Cursovaya2.pdb"
-  "libCursovaya2.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
