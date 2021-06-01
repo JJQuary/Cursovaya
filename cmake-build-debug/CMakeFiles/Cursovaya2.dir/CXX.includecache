@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Joghurt.cpp
+Joghurt.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Joghurt.h
+string
+-
+
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Joghurt.h
+string
+-
+Tovar.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Tovar.h
+Product.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Product.h
+
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Product.h
+string
+-
+Tovar.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Tovar.h
+
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Tovar.h
+string
+-
+
