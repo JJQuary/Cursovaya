@@ -7,22 +7,20 @@
 using namespace std;
 
 Shelf::Shelf()
-{
-    //ctor
-}
+{}
 
 
-void Shelf::AddTovar(const Tovar* book)
+void Shelf::AddTovar(const Tovar* item)
 {
     if (m_Tovars.size() >= GetCapacity())
     {
-        throw length_error("No place for book!");
+        throw length_error("No place for item!");
     }
-    m_Tovars.push_back(book);
+    m_Tovars.push_back(item);
 }
-void Shelf::AddTovar(const Tovar& book)
+void Shelf::AddTovar(const Tovar& item)
 {
-    AddTovar(&book);
+    AddTovar(&item);
 }
 
 
@@ -32,20 +30,20 @@ const Tovar* Shelf::TakeTovar(int number)
     {
         return nullptr;
     }
-    const Tovar * book = m_Tovars[number];
+    const Tovar * item = m_Tovars[number];
     m_Tovars.erase(m_Tovars.begin() + number);
-    return book;
+    return item;
 }
 
 const Tovar* Shelf::TakeTovar(const std::string& title)
 {
-    for (auto book_it = m_Tovars.begin(); book_it != m_Tovars.end(); ++book_it)
+    for (auto item_it = m_Tovars.begin(); item_it != m_Tovars.end(); ++item_it)
     {
-        const Tovar * book = *book_it;
-        if (book->GetTitle() == title)
+        const Tovar * item = *item_it;
+        if (item->GetTitle() == title)
         {
-            m_Tovars.erase(book_it);
-            return book;
+            m_Tovars.erase(item_it);
+            return item;
         }
     }
     return nullptr;

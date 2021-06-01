@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/JJ/CLionProjects/Cursovaya/Joghurt.cpp" "C:/Users/JJ/CLionProjects/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/Joghurt.cpp.obj"
-  "C:/Users/JJ/CLionProjects/Cursovaya/Product.cpp" "C:/Users/JJ/CLionProjects/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/Product.cpp.obj"
-  "C:/Users/JJ/CLionProjects/Cursovaya/Shelf.cpp" "C:/Users/JJ/CLionProjects/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/Shelf.cpp.obj"
-  "C:/Users/JJ/CLionProjects/Cursovaya/Tovar.cpp" "C:/Users/JJ/CLionProjects/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/Tovar.cpp.obj"
-  "C:/Users/JJ/CLionProjects/Cursovaya/main.cpp" "C:/Users/JJ/CLionProjects/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/main.cpp.obj"
+  "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Joghurt.cpp" "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/Joghurt.cpp.obj"
+  "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/MIlk.cpp" "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/MIlk.cpp.obj"
+  "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Product.cpp" "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/Product.cpp.obj"
+  "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Shelf.cpp" "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/Shelf.cpp.obj"
+  "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Tovar.cpp" "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/Tovar.cpp.obj"
+  "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/main.cpp" "C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/cmake-build-debug/CMakeFiles/Cursovaya2.dir/main.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "MSVC")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

@@ -16,10 +16,10 @@ public:
 
     void SetCapacity(int val) { m_Capacity = val; }
 
-    const std::vector<const Tovar*>& GetBooks() const { return m_Tovars; }
+    const std::vector<const Tovar*>& GetItem() const { return m_Tovars; }
 
-    void AddTovar(const Tovar* book);
-    void AddTovar(const Tovar& book);
+    void AddTovar(const Tovar* item);
+    void AddTovar(const Tovar& item);
 
     void SortBooks();
 
