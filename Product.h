@@ -16,7 +16,8 @@ public:
     Product(const std::string& title,
             int weight,
             int produced,
-            int expires);
+            int expires,
+            int price);
 
     int GetExpirationDate() const { return expires; }
 

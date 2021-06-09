@@ -18,7 +18,8 @@ public:
             int produced,
             int expiration,
             int fat,
-            std::string insides);
+            std::string insides,
+            int price);
 
     int GetFat() const { return fat; }
 

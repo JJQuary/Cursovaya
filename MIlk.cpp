@@ -5,8 +5,14 @@ using namespace std;
 Milk::Milk() : fat (0), PackageType("Carton")
 {}
 
-Milk::Milk(const string &title, int weight, int produced, int expiration, int fat, std::string PackageType)
-        : Product(title, weight, produced, expiration), fat(fat), PackageType(PackageType)
+Milk::Milk(const string &title,
+           int weight,
+           int produced,
+           int expiration,
+           int fat,
+           std::string PackageType,
+           int price)
+        : Product(title, weight, produced, expiration, price), fat(fat), PackageType(PackageType)
 {
 
 }

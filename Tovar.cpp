@@ -5,13 +5,13 @@
 
 using namespace std;
 
-Tovar::Tovar() : m_Title("None"), m_Weight(0), m_ProduceDate (0)
+Tovar::Tovar() : m_Title("None"), m_Weight(0), m_ProduceDate (0), m_price(0)
 {
     //ctor
 }
 
-Tovar::Tovar(const std::string& title, int weight, int produce_date)
-        : m_Title(title), m_Weight(weight), m_ProduceDate (produce_date)
+Tovar::Tovar(const std::string& title, int weight, int produce_date, int price)
+        : m_Title(title), m_Weight(weight), m_ProduceDate (produce_date), m_price(price)
 {
     if (produce_date <= 0)
     {
@@ -32,5 +32,6 @@ std::string Tovar::Info() const
 {
     return "Tovar: "+ GetTitle() +";"
     + " Weight: " + to_string(GetWeight()) +";" +
-    " Produced " + to_string(GetProductionDate()) +";";
+    " Produced " + to_string(GetProductionDate()) +";"+
+    " Price " + to_string(GetPrice()) +";";
 }

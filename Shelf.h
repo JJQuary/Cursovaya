@@ -15,11 +15,12 @@ public:
     int GetCapacity() { return m_Capacity; }
 
     void SetCapacity(int val) { m_Capacity = val; }
-
+    int GetTotalMoney() { return total_money; }
+    void SumPrice(int val) { total_money += val; }
     const std::vector<const Tovar*>& GetItem() const { return m_Tovars; }
 
-    void AddTovar(const Tovar* item);
-    void AddTovar(const Tovar& item);
+    void AddTovar(const Tovar* item, int quantity);
+    void AddTovar(const Tovar& item, int quantity);
 
     void SortBooks();
 
@@ -30,6 +31,7 @@ protected:
 
 private:
     int m_Capacity;
+    int total_money = 0;
     std::vector<const Tovar*> m_Tovars;
 };
 

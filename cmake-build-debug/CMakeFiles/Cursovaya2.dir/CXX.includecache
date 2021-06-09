@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Joghurt.cpp
-Joghurt.h
 C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Joghurt.h
 string
 -
+Tovar.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Tovar.h
+Product.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Product.h
 
-C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Joghurt.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/MIlk.h
 string
 -
 Tovar.h
@@ -26,7 +28,29 @@ string
 Tovar.h
 C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Tovar.h
 
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Shelf.h
+vector
+-
+Tovar.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Tovar.h
+
 C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Tovar.h
 string
 -
+
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/main.cpp
+iostream
+-
+vector
+-
+Tovar.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Tovar.h
+Shelf.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Shelf.h
+Product.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Product.h
+Joghurt.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/Joghurt.h
+MIlk.h
+C:/Users/Calcifer/CLionProjects/Cursovaya2/Cursovaya/MIlk.h
 

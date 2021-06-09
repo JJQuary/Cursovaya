@@ -18,7 +18,8 @@ public:
             int produced,
             int expiration,
             int fat,
-            std::string PackageType);
+            std::string PackageType,
+            int price);
 
     int GetFat() const { return fat; }
 
@@ -36,4 +37,4 @@ private:
 };
 
 
-#endif //CURSOVAYA2_MILK_H
+#endif CURSOVAYA2_MILK_H

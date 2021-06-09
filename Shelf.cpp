@@ -10,17 +10,19 @@ Shelf::Shelf()
 {}
 
 
-void Shelf::AddTovar(const Tovar* item)
-{
-    if (m_Tovars.size() >= GetCapacity())
-    {
-        throw length_error("No place for item!");
+void Shelf::AddTovar(const Tovar* item, int quantity) {
+    while (quantity > 0) {
+        if (m_Tovars.size() >= GetCapacity()) {
+            throw length_error("No place for item!");
+        }
+        m_Tovars.push_back(item);
+    quantity--;
     }
-    m_Tovars.push_back(item);
+
 }
-void Shelf::AddTovar(const Tovar& item)
+void Shelf::AddTovar(const Tovar& item, int quantity)
 {
-    AddTovar(&item);
+    AddTovar(&item, quantity);
 }
 
 
@@ -43,6 +45,7 @@ const Tovar* Shelf::TakeTovar(const std::string& title)
         if (item->GetTitle() == title)
         {
             m_Tovars.erase(item_it);
+            SumPrice(item->GetPrice());
             return item;
         }
     }
