@@ -15,18 +15,16 @@ public:
 
     Product(const std::string& title,
             int weight,
-            int produced,
-            int expires,
+            char produced,
+            char* expires,
             int price);
 
-    int GetExpirationDate() const { return expires; }
-
-    void SetExpirationDate(int val) { expires = val; }
+    const char *const GetExpirationDate() const { return expires; }
 
     std::string Info() const override;
 
 private:
-    int expires;
+    const char *expires;
 };
 
 

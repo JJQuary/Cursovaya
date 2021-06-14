@@ -9,11 +9,11 @@
 class Tovar
 {
 public:
-    /** Default constructor */
+
     Tovar();
-    /** Constructor with parameters*/
-    Tovar(const std::string& title, const int weight, int produce_date, int price);
-    /** Default destructor */
+
+    Tovar(const std::string& title, int weight, char produce_date, int price);
+
     virtual ~Tovar(){}
 
     std::string GetTitle() const { return m_Title; }
@@ -24,9 +24,9 @@ public:
 
     void SetWeight(int val) { m_Weight = val; }
 
-    int GetProductionDate() const { return m_ProduceDate; }
+    char GetProductionDate() const { return m_ProduceDate; }
 
-    void SetProductionDate(int val);
+    void SetProductionDate(const char val);
 
     int GetPrice() const { return m_price; }
 
@@ -37,7 +37,7 @@ public:
 private:
     std::string m_Title;
     int m_Weight;
-    int m_ProduceDate;
+    char m_ProduceDate;
     int m_price;
 };
 

@@ -15,8 +15,8 @@ public:
 
     Joghurt(const std::string& title,
             int weight,
-            int produced,
-            int expiration,
+            char produced,
+            char* expiration,
             int fat,
             std::string insides,
             int price);

@@ -15,6 +15,7 @@ CMakeFiles/Cursovaya2.dir/Product.cpp.obj: ../Product.cpp
 CMakeFiles/Cursovaya2.dir/Product.cpp.obj: ../Product.h
 CMakeFiles/Cursovaya2.dir/Product.cpp.obj: ../Tovar.h
 
+CMakeFiles/Cursovaya2.dir/Shelf.cpp.obj: ../Product.h
 CMakeFiles/Cursovaya2.dir/Shelf.cpp.obj: ../Shelf.cpp
 CMakeFiles/Cursovaya2.dir/Shelf.cpp.obj: ../Shelf.h
 CMakeFiles/Cursovaya2.dir/Shelf.cpp.obj: ../Tovar.h
