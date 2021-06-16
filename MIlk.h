@@ -15,19 +15,19 @@ public:
 
     Milk(const std::string& title,
             int weight,
-            char produced,
-            char* expiration,
+            std::string produced,
+            std::string expiration,
             int fat,
             std::string PackageType,
             int price);
 
     int GetFat() const { return fat; }
 
-    void SetFat(int val) { fat = val; }
-
     std::string GetPackageType() const {return PackageType; };
 
-    void SetPackageType(std::string val){ PackageType = val; }
+    std::string Type() const override {
+        return "Milk";
+    }
 
     std::string Info() const override;
 

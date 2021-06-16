@@ -7,8 +7,8 @@ Milk::Milk() : fat (0), PackageType("Carton")
 
 Milk::Milk(const string &title,
            int weight,
-           char produced,
-           char* expiration,
+           std::string produced,
+           std::string expiration,
            int fat,
            std::string PackageType,
            int price)
@@ -19,5 +19,5 @@ Milk::Milk(const string &title,
 
 std::string Milk::Info() const
 {
-    return Product::Info() + " Fat: " + to_string(GetFat()) + ";" + " Package Type : " + PackageType + " ";
+    return Product::Info() + " Fat: " + to_string(GetFat()) + ";" + " Package Type : " + GetPackageType() + " ";
 }

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string.h>
-
 #include "Tovar.h"
 #include "Shelf.h"
 #include "Product.h"
@@ -10,34 +9,117 @@
 
 using namespace std;
 
-int main()
-{
 
-    Joghurt e("Joghurt Burya", 12,
-              '2012.09.13', '2012.09.13',
-              32, "Peach", 123);
-    Milk f("Milk", 412,
-           '2012.09.13', '2012.09.13',
-           41, "Carton", 342);
+
+
+
+int main() {
+
+    string Title, insides, package;
+    int weight, fat, price, amount;
+    string produced, date_today;
+    string expiration;
+    char selection;
     Shelf sh;
-    sh.SetCapacity(354);
-    sh.AddTovar(e, 32);
-    sh.AddTovar(f, 12);
+    Joghurt *j;
+    Milk *m;
 
+    do {
+        cout << "  Welcome to the hypermarket\n";
+        cout << "  ====================================\n";
+        cout << "  1.  Add Joghurt on the shelf\n";
+        cout << "  2.  Add Milk on the shelf\n";
+        cout << "  3.  Sell Product\n";
+        cout << "  4.  Check Expired products\n";
+        cout << "  5.  Sort tovars\n";
+        cout << "  6.  Get total earned money\n";
+        cout << "  7.  Print Shelf\n";
+        cout << "\n";
+        cout << "  8.  Exit\n";
+        cout << "  ====================================\n";
+        cout << "  Enter your selection: ";
+        cin >> selection;
+        cout << endl;
 
-    sh.TakeTovar(11);
-    string title;
-    char * date_today = "2021.06.14";
-    cout << "Enter today date in format : YYYY.MM.DD " << endl;
-    sh.Check_Date(date_today);
-    cout << "Enter name of tovar:" << endl;
-    getline(cin , title);
-    auto tovar = sh.TakeTovar(title);
-    if (tovar == nullptr) {
-        cout << "Product not found!" << endl;
-    } else {
-        cout << tovar->Info() << endl;
-    }
-    cout << sh.GetTotalMoney();
+        switch (selection) {
+            case '1':
+                cout << "  You have selected Add Joghurt on the shelf\n";
+                cout << "Enter title\n";
+                cin >> Title;
+                cout << "Enter weight\n";
+                cin >> weight;
+                cout << "Enter fat\n";
+                cin >> fat;
+                cout << "Enter Production Date\n";
+                cin >> produced;
+                cout << "Enter Expiration Date\n";
+                cin >> expiration;
+                cout << "Enter price\n";
+                cin >> price;
+                cout << "Enter amount of tovar\n";
+                cin >> amount;
+                cout << "Enter insides";
+                cin >> insides;
+                j = new Joghurt(Title, weight, produced, expiration, fat, insides, price);
+                sh.AddTovar(j, amount);
+
+                cout << "\n";
+                break;
+            case '2':
+                cout << "  You have selected Add Milk on the shelf\n";
+                cout << "Enter title\n";
+                cin >> Title;
+                cout << "Enter weight\n";
+                cin >> weight;
+                cout << "Enter fat\n";
+                cin >> fat;
+                cout << "Enter Production Date\n";
+                cin >> produced;
+                cout << "Enter Expiration Date\n";
+                cin >> expiration;
+                cout << "Enter price\n";
+                cin >> price;
+                cout << "Enter amount of tovar\n";
+                cin >> amount;
+                cout << "Enter package type";
+                cin >> package;
+                m = new Milk(Title, weight, produced, expiration, fat, package, price);
+                sh.AddTovar(m, amount);
+                cout << "\n";
+                break;
+            case '3':
+                cout << "  You have selected Sell Product\n";
+                cout << "Enter title\n";
+                cin >> Title;
+                sh.TakeTovar(Title);
+
+                cout << "\n";
+                break;
+
+            case '4':
+                cout << "  Check Expired products\n";
+                cout << "Enter today day\n";
+                cin >> date_today;
+                sh.DeleteExpiredProducts(date_today);
+                cout << "\n";
+                break;
+
+            case '5':
+                cout << "  Sort tovars\n";
+                sh.Sort();
+                break;
+
+            case '6':
+                cout << sh.GetTotalMoney();
+//            case '7':
+//                sh.VectorPrint(sh.GetVector());
+            default:
+                cout << selection << "is not a valid menu item.\n";
+                cout << endl;
+        }
+
+    } while (selection != 0);
+
     return 0;
 }
+

@@ -1,28 +1,53 @@
 
 #include "Shelf.h"
 #include <string.h>
-
+#include <iostream>
 #include <stdexcept>
+#include <algorithm>
 
 using namespace std;
 
-Shelf::Shelf()
-{}
+void VectorPrint(std::vector<const Product*> m_Products)
+{
+    for (auto item : m_Products){
+        item->Info();
+        cout << endl;
+    }
+}
+
+int DateToInt(const std::string& date)
+{
+    int d, m, y;
+    sscanf(date.c_str(), "%d.%d.%d", &d, &m, &y);
+    int IntDate = y*10000+m*100+d;
+    return IntDate;
+}
+
+bool compare_by_title_ptr(const Product* p1, const Product* p2)
+{
+    return p1->Type() > p2->Type() || (p1->Type() == p2->Type() && p1->GetTitle() > p2->GetTitle());
+}
+
+Shelf::Shelf(){}
+
+void Shelf::Sort()
+{
+    sort(m_Products.begin(), m_Products.end(), compare_by_title_ptr);
+}
 
 
-void Shelf::AddTovar(const Product* item, int quantity) {
-    while (quantity > 0) {
-        if (m_Products.size() >= GetCapacity()) {
+void Shelf::AddTovar(const Product* item, int quantity)
+{
+    while (quantity > 0)
+    {
+        if (m_Products.size() >= GetCapacity())
+        {
             throw length_error("No place for item!");
         }
         m_Products.push_back(item);
     quantity--;
     }
 
-}
-void Shelf::AddTovar(const Product& item, int quantity)
-{
-    AddTovar(&item, quantity);
 }
 
 
@@ -38,6 +63,7 @@ const Product* Shelf::TakeTovar(int number)
     return item;
 }
 
+
 const Product* Shelf::TakeTovar(const std::string& title)
 {
     for (auto item_it = m_Products.begin(); item_it != m_Products.end(); ++item_it)
@@ -52,34 +78,19 @@ const Product* Shelf::TakeTovar(const std::string& title)
     }
     return nullptr;
 }
-const Product* Shelf::Out_Date_Tovar(int number)
-{
-    if (number < 0 || number >= m_Products.size())
+
+void Shelf::DeleteExpiredProducts(const string& date){
+    int date_today=DateToInt(date);
+    for (auto item_it = m_Products.begin(); item_it != m_Products.end();)
     {
-        return nullptr;
-    }
-    const Product * item = m_Products[number];
-    m_Products.erase(m_Products.begin() + number);
-    return item;
-}
-const Product* Shelf::Check_Date(char *today_day){
-    for (auto item_it = m_Products.begin(); item_it != m_Products.end(); ++item_it)
-    {
-        int counter=0;
         const Product *item = *item_it;
-        int d1,m1,y1;
-        int d2,m2,y2;
-        sscanf(today_day, "%d.%d.%d", &d1, &m1, &y1);
-        sscanf(item->GetExpirationDate(), "%d.%d.%d", &d2, &m2, &y2);
-        int date1 = y1*10000+m1*100+d1;
-        int date2 = y2*10000+m2*100+d2;
-        if (date1 >= date2){
-            counter++;
-            continue;
-        } else{
-            Out_Date_Tovar(counter);
-            }
-
+        int date_product = DateToInt(item->GetExpirationDate());
+        if (date_today > date_product)
+        {
+            delete item;
+            item_it=m_Products.erase(item_it);
+        } else {
+            ++item_it;
         }
-
     }
+}

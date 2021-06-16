@@ -15,21 +15,21 @@ public:
 
     Joghurt(const std::string& title,
             int weight,
-            char produced,
-            char* expiration,
+            std::string produced,
+            std::string expiration,
             int fat,
             std::string insides,
             int price);
 
     int GetFat() const { return fat; }
 
-    void SetFat(int val) { fat = val; }
-
     std::string GetInsides() const {return insides; };
 
-    void SetInsides(std::string val){ insides = val; }
-
     std::string Info() const override;
+
+    std::string Type() const override {
+        return "Joghurt";
+    }
 
 private:
     int fat;

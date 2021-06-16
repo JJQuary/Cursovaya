@@ -11,32 +11,39 @@ class Shelf
 {
 public:
     Shelf();
+    void VectorPrint(std::vector<const Product*> m_Products);
+
+    std::vector<const Product*> GetVector(){return m_Products;}
 
     int GetCapacity() { return m_Capacity; }
 
     void SetCapacity(int val) { m_Capacity = val; }
+
     int GetTotalMoney() { return total_money; }
+
     void SumPrice(int val) { total_money += val; }
+
     const std::vector<const Product*>& GetItem() const { return m_Products; }
 
-    void AddTovar(const Product* item, int quantity);
-    void AddTovar(const Product& item, int quantity);
+    void Sort();
 
-    void SortBooks();
+    void AddTovar(const Product* item, int quantity);
 
     const Product* TakeTovar(int number);
+
     const Product* TakeTovar(const std::string& title);
-    const Product* Out_Date_Tovar(int number);
-    const Product* Check_Date(char* today_date);
+
+    void DeleteExpiredProducts(const std::string& date);
 
 protected:
-
+    std::vector<const Product*> m_Products;
 private:
     int m_Capacity;
     int total_money = 0;
-    std::vector<const Product*> m_Products;
+
 };
 
-
+int DateToInt(const std::string& date);
+void VectorPrint(std::vector<const Product*> m_Products);
 
 #endif //CURSOVAYA2_SHELF_H

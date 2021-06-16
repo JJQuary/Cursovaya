@@ -7,8 +7,8 @@ Joghurt::Joghurt() : fat (0), insides("Peach")
 
 Joghurt::Joghurt(const string &title,
                  int weight,
-                 char produced,
-                 char* expiration,
+                 std::string produced,
+                 std::string expiration,
                  int fat,
                  std::string insides,
                  int price)
@@ -19,7 +19,7 @@ Joghurt::Joghurt(const string &title,
 
 std::string Joghurt::Info() const
 {
-    return Product::Info() + " Fat: " + to_string(GetFat()) + ";" + " Insides " + insides + " ";
+    return Product::Info() + " Fat: " + to_string(GetFat()) + ";" + " Insides " + GetInsides() + " ";
 }
 
 
