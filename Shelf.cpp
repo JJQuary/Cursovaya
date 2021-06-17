@@ -87,7 +87,6 @@ void Shelf::DeleteExpiredProducts(const string& date){
         int date_product = DateToInt(item->GetExpirationDate());
         if (date_today > date_product)
         {
-            delete item;
             item_it=m_Products.erase(item_it);
         } else {
             ++item_it;
