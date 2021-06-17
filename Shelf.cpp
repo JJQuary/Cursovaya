@@ -7,13 +7,7 @@
 
 using namespace std;
 
-void VectorPrint(std::vector<const Product*> m_Products)
-{
-    for (auto item : m_Products){
-        item->Info();
-        cout << endl;
-    }
-}
+
 
 int DateToInt(const std::string& date)
 {
@@ -35,6 +29,12 @@ void Shelf::Sort()
     sort(m_Products.begin(), m_Products.end(), compare_by_title_ptr);
 }
 
+void Shelf::VectorPrint() {
+    for (auto item : m_Products){
+        cout <<     item->Info();
+        cout << endl;
+    }
+}
 
 void Shelf::AddTovar(const Product* item, int quantity)
 {

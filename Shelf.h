@@ -11,7 +11,7 @@ class Shelf
 {
 public:
     Shelf();
-    void VectorPrint(std::vector<const Product*> m_Products);
+    void VectorPrint();
 
     std::vector<const Product*> GetVector(){return m_Products;}
 
@@ -36,10 +36,11 @@ public:
     void DeleteExpiredProducts(const std::string& date);
 
 protected:
-    std::vector<const Product*> m_Products;
+
 private:
     int m_Capacity;
     int total_money = 0;
+    std::vector<const Product*> m_Products;
 
 };
 

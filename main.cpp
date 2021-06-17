@@ -56,10 +56,10 @@ int main() {
                 cin >> expiration;
                 cout << "Enter price\n";
                 cin >> price;
-                cout << "Enter amount of tovar\n";
-                cin >> amount;
                 cout << "Enter insides";
                 cin >> insides;
+                cout << "Enter amount of product\n";
+                cin >> amount;
                 j = new Joghurt(Title, weight, produced, expiration, fat, insides, price);
                 sh.AddTovar(j, amount);
 
@@ -79,10 +79,10 @@ int main() {
                 cin >> expiration;
                 cout << "Enter price\n";
                 cin >> price;
-                cout << "Enter amount of tovar\n";
-                cin >> amount;
                 cout << "Enter package type";
                 cin >> package;
+                cout << "Enter amount of product\n";
+                cin >> amount;
                 m = new Milk(Title, weight, produced, expiration, fat, package, price);
                 sh.AddTovar(m, amount);
                 cout << "\n";
@@ -111,8 +111,10 @@ int main() {
 
             case '6':
                 cout << sh.GetTotalMoney();
-//            case '7':
-//                sh.VectorPrint(sh.GetVector());
+                break;
+            case '7':
+                sh.VectorPrint();
+                break;
             default:
                 cout << selection << "is not a valid menu item.\n";
                 cout << endl;
